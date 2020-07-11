@@ -1,0 +1,103 @@
+*{
+    margin:0;padding:0;box-sizing: border-box;
+}
+html{
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+}
+body{
+    background: #2f216b;
+}
+li{
+    list-style: none;
+}
+img{
+    user-select: none;
+}
+a{
+    color:white;text-decoration: none;font-size:1.4rem;
+}
+.landing{
+    height:90vh;width:90%;margin:auto;
+}
+.landing > img{
+height:100%;width:100%;object-fit: cover;
+}.cards{
+    display:flex;height:70vh;width:90%;justify-content: space-around;align-items: center;margin:auto;
+}.card{
+    padding:20px;margin:10px;position: relative;top:10vh;width:50%;border: 1px solid black;
+}.breadcrumbs{
+ opacity: 0;pointer-events: none;  height:100vh; width:100%;transition: all .8s;position: absolute;
+ clip-path: circle(100px at 0% 0%);
+    -webkit-clip-path: circle(100px at 0% 0%);z-index: 100;
+background-color: #1b1a46;
+border-radius:10px;
+border-top-right-radius: 0px;
+}
+.card p{
+    width:100%;font-size:1.2rem;
+}
+.card h2{
+    font-size: 2rem;
+}
+.card img{
+    height:500px;width:100%;
+}
+#card-section h1{
+    position: relative;left:45%;top:3vh;display:inline-block;font-size: 2.9rem;font-weight: 800;font-family: sans-serif;
+}
+.breadcrumbs.open{
+    opacity:1;pointer-events: all;
+    clip-path: circle(1000px at 0% 0%);
+    -webkit-clip-path: circle(2000px at 0% 0%);
+    border-top-left-radius: 0px;
+    z-index: 100;
+}
+.landingContainer{
+    position: absolute;top:50%;left:50%;transform: translate(-50%,-50%);width:50%;text-align: center;
+}
+.landingContainer p{
+    font-size:1.4rem;font-weight: 800;color:#bf12cf;
+}
+.landingContainer h1{
+    font-size:3rem;font-family: sans-serif;font-weight: 700;background:linear-gradient(90deg,#bf12cf,#bf12cf,#5e1d49,#5e1d49,#5e1d49);padding:10px;-webkit-text-fill-color: transparent;
+    background-clip: text;-webkit-background-clip: text;
+}
+#hamburger{
+    height:100px;width:100px;z-index: 1;position: absolute;
+    left:20px;top:0px;cursor: pointer;
+}
+.hamburger-container{
+    width:90%;height:100px;background:#5e1d49;margin:auto;position: relative;
+}.navContianer{
+    width:90%;margin:auto;position: relative;
+}
+
+@media only screen and (max-width:1024px ){
+    .breadcrumbs{
+        width:100%;height: 100%;
+    }
+    .navContianer{
+      height:100vh;position: absolute;width:90%;margin-left:5%;
+    }
+    .cards{
+        display:flex;
+        height:70vh;
+        width:90%;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin:auto;
+    }
+    .card{
+        width:100%;
+    }
+    
+
+    .landingContainer h1{
+        width:100%;
+    }
+    .landingContainer p{
+        font-size:1.3rem;
+    }
+}
